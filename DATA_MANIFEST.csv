@@ -1,0 +1,6 @@
+file,bytes,sha256,source
+DCH1_buildings.geojson,66288252,2dddeaaff8480bf080628077294e046be204ecb25faf7180b6181d8a49d7255b,"City of Chicago Data Portal, Building Footprints (dataset syp8-uezg), station DCH1 window"
+DLA4_buildings.geojson,70224698,d7458be5018aec46a7f6fe09c9d7f0b6fec21ea742c66ab5b5c7bcef7c50a359,"LARIAC4 Building Footprints, Los Angeles County (ArcGIS FeatureServer Building_Footprints), station DLA4 window"
+dau1_buildings_raw.geojson,18721446,12216e15ab3f46f09a875585f646595065b4e29bf49418be98ef105b0cafe2a8,"City of Austin Open Data Portal, Building Footprints Year 2013 (dataset 3qcc-8uhz), station DAU1 window"
+eval_route_data.json,37777768,dfd8a198b9df5e3b194d3a268f6f442edcd77f028870d54a8d7397a7bc366466,"Amazon Last Mile Routing Research Challenge, evaluation route data (CC BY-NC 4.0)"
+eval_package_data.json,166201035,612f9aae67df34e637b106a6e2b1cd627fee11fdc0107937bdb56f8c61ec7848,"Amazon Last Mile Routing Research Challenge, evaluation package data (CC BY-NC 4.0)"

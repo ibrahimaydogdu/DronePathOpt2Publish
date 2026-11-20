@@ -1,0 +1,52 @@
+SA (heur.anneal_multi, 3 restarts x 20000 iters, same cost model) vs exact frontier, real base arms, n = 12, 10 draws per arm (seeds 1001-1010), k in {2,4}, T = Tmin + theta (T_Emin - Tmin).
+Cells: 240. Exact match (gap <= 0.1 %): 182 (76 %). SA found no feasible plan: 26 (11 %). Found but worse: 32 (13 %). Of found plans: 182/214 = 85 % match (n <= 10: 96-98 % in the paper).
+k=2: match of 30 per theta: 21 / 14 / 19 / 24 (theta 0 / 0.25 / 0.5 / 1); no feasible plan found: 9 / 8 / 5 / 4.
+k=4: match of 30: 29 / 25 / 26 / 24; no infeasible; max gap 0.44 / 5.73 / 6.94 / 12.04 %.
+Median gap 0 in every cell; makespan bound never violated by a returned plan. Median SA time 8.3 s per run.
+Caveat: budget not scaled with n; this separates neither budget from landscape difficulty. Next test: raise iterations on the missed cells only.
+
+Rerun of the 58 missed cells with 100000 iterations (5x), 3 restarts:
+ fixed cooling alpha=0.9995 (temperature at its floor after ~20000 it): matched 13, no plan 24, found-but-worse 21 (median 1.9 %, max 12.04 %).
+ cooling scaled with iterations (alpha = 0.9995^(20000/iters)): matched 17, no plan 20, found-but-worse 21 (median 1.9 %, max 12.04 %).
+Overall with the scaled rerun: 199/240 (83 %) match; no plan 20 (8 %), of which 2 drones, theta 0: 8 of 9 missed cells still without a plan.
+Reading: five times the budget with proper cooling repairs 29 % of the missed cells; the remainder is not a budget effect for this SA design (3 restarts, one neighbourhood set). Not tested: other metaheuristics (ABC, GA), tuned SA, more restarts. 10 draws per arm.
+
+ABC and GA (own discrete implementations, heur_pop.py; same encoding, neighbourhood and cost model as SA; budget 80000 cost evaluations; 1 run per cell; no feasibility-repair phase, makespan by penalty):
+ exact match (<= 0.1 %) of 240 cells: SA 182, ABC 74, GA 42.
+ no feasible plan found: SA 26, ABC 57, GA 108.
+ found but worse: SA 32, ABC 109, GA 90 (median gap 1.5 / 1.1 / 2.0 %, max 12.0 / 13.3 / 13.5 %).
+ Worst cells (k=2, theta 0 and k=4, theta 0): ABC and GA find no plan in 21-28 of 30 cells.
+Reading: the unguided population methods are far weaker than SA with its repair phase and start from the unlimited-fleet solution (Proposition 1c). These ABC/GA are untuned and are NOT the library implementations: the library ABC (D1 heuristics.py, random keys + decoder) has not been run on the fleet problem. No claim that metaheuristics struggle can rest on this table.
+
+Library ABC / TLBO / GWO (D1 ports of OptimizationMethods.vb, random keys; fleet decoder with exact per-drone Pareto split; heur_keys.py), 80000 decoder calls, N = 30, 1 run per cell, same 240 cells:
+ exact match (<= 0.1 %): SA 182, ABC 40, TLBO 12, GWO 9 (of 240); at least one library method matches in 54 cells.
+ no feasible plan: SA 26, ABC 74, TLBO 90, GWO 120. Found but worse: 126 / 138 / 111; median gap 2.0 / 3.2 / 3.7 %, max 22.8 / 22.9 / 20.5 %.
+ At the tightest bound (theta = 0) the library methods find a plan in 1-5 of 30 cells (k=2: 25-29 of 30 without a plan; k=4: 25-28 of 30); SA: 21 of 30 (k=2) and 30 of 30 (k=4).
+ Sanity: no value below the exact optimum in any cell (0 of 960).
+Reading: on these n=12 cells, the unmodified library methods (default parameters, one run per cell) are far from the exact frontier under makespan bounds, and the SA with feasibility repair and the unlimited-fleet start is much better. This is a first indication of the regime where problem-specific guidance is needed; it is not yet evidence for a method claim: needs 30 runs per cell with seeds 1001-1030, Holm-corrected Mann-Whitney U and A12, tuned variants, and a library + guidance ablation. The SA is the authors' own guided design, not a library method.
+
+Ablation of guidance on the library ABC (heur_guided.py; 80000 evaluations incl. guide cost; same 240 cells, 1 run per cell):
+ exact match: base ABC 40, +seed 43, +repair 4, +both 25 (SA 182). No feasible plan: 74 / 69 / 78 / 66 (SA 26). Median gap of found-but-worse: 2.0 / 1.6 / 4.7 / 2.6 %. No value below the exact optimum (0 of 1200).
+ seed = unlimited-fleet solution from a 3000-iteration annealing (charged up to 12000 evaluations) packed onto k drones and written as keys; repair = greedy move of requests off the most violating drone inside the decoder (each tried move charged as one evaluation).
+Reading: neither guide, nor both, brings the library ABC near the SA; the greedy repair alone lowers matches (it spends budget and moves solutions away from energy-efficient trips). The SA's advantage therefore does not come from the two guides as bolt-ons to the random-key ABC; it may come from the structured neighbourhood (relocate/swap/reverse on plans) with the makespan bound as a hard constraint. Not tested: which SA component matters (ablate the SA's own repair phase, unlimited-fleet start and hard constraint), tuned guides, a trip-level encoding for ABC. One run per cell, one instance size.
+
+CORRECTION (2026-11-19): the stored T in bridge_real_n12.csv is rounded to 0.1 s. At theta = 0, T equals Tmin, so rounding down made T < Tmin (infeasible) in about half of the cells. The first SA run (unrounded T) is unaffected. The 100000-iteration SA rerun, ABC/GA (heur_pop), library ABC/TLBO/GWO (heur_keys) and the guidance ablation used the rounded T: their results at theta = 0 are biased towards "no plan" and are NOT comparable with the SA column; the statement "k=2, theta=0: 8 of 9 cells still without a plan" was an artefact. Cells at theta > 0 are affected only if a frontier point lies within 0.05 s of T (no value below the exact optimum was seen). Reruns with T + 0.05 s: SA component ablation on all 240 cells (with a full-SA variant in the same code), and theta = 0 cells (60) of ABC/GA, library methods and guidance ablation (files *_th0.csv).
+
+2026-11-19 SONUC (T+0.05 duzeltmesi sonrasi; esleşme/plan yok/kotu, 240 hucre):
+SA ablasyonu: full 182/26/32 (kayitli SA'yi birebir tekrarladi), no_unl 179/24/37, no_p1 158/41/41, soft 183/26/31, plain 155/37/48.
+ => Faz-1 (makespan onarimi) ana bilesen; sinirsiz-filo baslangici ve sert kisit ~etkisiz (soft=full).
+theta=0 (60 hucre) yeniden kosu: SA 50/9/1; own ABC 17/24/19; own GA 11/43/6; lib ABC 7/40/13, TLBO 5/39/16, GWO 3/50/7; guided ABC seed 13/34/13, repair 3/43/14, both 7/35/18.
+ => Duzeltmeden sonra da SA >> digerleri; yon degismedi, "8/9" iddiasi artefakttı.
+
+2026-11-20 KAMPANYA30 (240 hucre x 30 kosu) + FAKTORIYEL30 (72 hucre x 30 kosu) ozeti: bkz CAMPAIGN30_SUMMARY_D2.txt, FACTORIAL30_SUMMARY_D2.txt.
+Faktoriyel (kesinle eslesme %): SA_full 86, SA_plain 70, SAkeys 47, ownABC(yerel kodlama) 45, ownGA 29, libABC(keys) 22, gABC 16, GWO 7, TLBO 6.
+Yorum: hem arama paradigmasi (SA > populasyon; keys uzerinde bile 47 vs 22) hem kodlama (yerel > keys; ABC 45 vs 22) etkili; en iyi = SA + yerel kodlama + faz-1 onarimi. Kutuphane yontemleri (TLBO/GWO/ABC) bu problemde gercekten zorlaniyor (<=22%).
+Hakem (ic+dis) ortak: bagimsiz yontem makalesi icin yetersiz (yeni yontem degil, n>=14 olcekleme + ALNS/MILP + ayarli rakip yok); D2 icinde kisa not/ek ya da D3 icin n>=14 ve guclu rakip gerekir.
+Kisitlar: faktoriyel 72 hucre (ornek 1001-1003); SAkeys/ownABC ayarlanmadi; kosu tohumlari rakipler arasi ayni.
+
+2026-11-20 DUZELTME (tolerans): T+0.05 kosularinda theta=0 hucrelerden AUS_base 1003 k2 ve LA_base 1007 k2'de sezgisel degerler kesin E_exact'in ALTINA iner (orn. 1079.182 vs 1088.293; cephe noktasi Tmin'in 0.03 s ustunde, T+0.05 icine giriyor). Hata degil, T toleransi. Analizlerde 'eslesme' = deger <= E_exact + 1e-3 olarak guncellendi (SA_full 76.0->76.3; faktoriyel 86.2->86.5). Sonuclar degismedi.
+ALNS (n=12, 72 hucre x 30 kosu): esleşme %75.7, plan yok %10.3 (SA_full 86.5, SA_plain 70.5, ownABC 44.8). ALNS faz-1/sinirsiz-filo baslangici olmadan SA_plain'i geciyor => guclu rakip; SA'nin ustunlugu ALNS'ye karsi ~11 puan.
+
+2026-11-20 N=20 PILOT (kesin referans yok; 36 hucre = 3 sehir x ornek 1001-1002 x k{2,4} x theta{0.25,0.5,1}; 10 kosu, tohum 1001-1010; PILOT, 30 kosu degil):
+referans = hucrede herhangi bir yontem/kosunun bulduğu en iyi (alt sinir degil). hit-best%(<=en iyi+0.1%) / plan yok% / ort. bosluk%:
+SA_full 25.0/9.2/0.94; ALNS 8.6/12.5/2.02; ownABC 0.0/56.1/6.49; libABC 0.3/30.3/6.11. SA kosu suresi ort. 7.2 s. Sira n=12 ile ayni; mutlak 'en iyi'ye isabet dusuk (referans SA agirlikli, 10 kosu).

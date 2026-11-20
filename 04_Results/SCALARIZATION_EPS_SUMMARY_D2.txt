@@ -1,0 +1,10 @@
+Thinning: merge neighbours closer than 30 s and 1 % energy.
+LA_base k=2: points 109 -> 87 after thinning; supported 81 (74.3 %) -> 71 (81.6 %); unsupported share per draw (thinned) median 0.0 %, max 50.0 %
+LA_base k=3: points 105 -> 93 after thinning; supported 75 (71.4 %) -> 73 (78.5 %); unsupported share per draw (thinned) median 0.0 %, max 60.0 %
+LA_base k=4: points 131 -> 113 after thinning; supported 89 (67.9 %) -> 84 (74.3 %); unsupported share per draw (thinned) median 12.5 %, max 62.5 %
+CHI_base k=2: points 134 -> 104 after thinning; supported 93 (69.4 %) -> 81 (77.9 %); unsupported share per draw (thinned) median 0.0 %, max 66.7 %
+CHI_base k=3: points 212 -> 157 after thinning; supported 91 (42.9 %) -> 87 (55.4 %); unsupported share per draw (thinned) median 33.3 %, max 72.7 %
+CHI_base k=4: points 334 -> 240 after thinning; supported 124 (37.1 %) -> 116 (48.3 %); unsupported share per draw (thinned) median 50.0 %, max 72.7 %
+AUS_base k=2: points 121 -> 87 after thinning; supported 76 (62.8 %) -> 66 (75.9 %); unsupported share per draw (thinned) median 0.0 %, max 66.7 %
+AUS_base k=3: points 270 -> 183 after thinning; supported 117 (43.3 %) -> 98 (53.6 %); unsupported share per draw (thinned) median 50.0 %, max 70.0 %
+AUS_base k=4: points 378 -> 257 after thinning; supported 141 (37.3 %) -> 127 (49.4 %); unsupported share per draw (thinned) median 50.0 %, max 72.7 %

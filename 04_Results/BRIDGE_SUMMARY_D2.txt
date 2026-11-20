@@ -1,0 +1,37 @@
+GAP n=8: rows 360, missed 2; gap median 0.00% mean 0.08% p95 0.00% max 10.30%; exact-hit 0.96; sec 1.1
+   theta 0.0: missed 2/90, mean gap 0.00%, max 0.00%
+   theta 0.25: missed 0/90, mean gap 0.16%, max 10.30%
+   theta 0.5: missed 0/90, mean gap 0.06%, max 2.80%
+   theta 1.0: missed 0/90, mean gap 0.12%, max 2.36%
+GAP n=10: rows 360, missed 34; gap median 0.00% mean 0.37% p95 2.78% max 12.00%; exact-hit 0.84; sec 1.6
+   theta 0.0: missed 24/90, mean gap 0.00%, max 0.00%
+   theta 0.25: missed 7/90, mean gap 0.77%, max 10.63%
+   theta 0.5: missed 3/90, mean gap 0.33%, max 12.00%
+   theta 1.0: missed 0/90, mean gap 0.33%, max 5.74%
+SCALE n=20 k=2 T=1800: feasible 0/10 medE nan sec 5
+SCALE n=20 k=2 T=3600: feasible 10/10 medE 1519 sec 2
+SCALE n=20 k=2 T=7200: feasible 10/10 medE 1514 sec 2
+SCALE n=20 k=4 T=1800: feasible 10/10 medE 1525 sec 3
+SCALE n=20 k=4 T=3600: feasible 10/10 medE 1535 sec 2
+SCALE n=20 k=4 T=7200: feasible 10/10 medE 1524 sec 2
+SCALE n=20 k=6 T=1800: feasible 10/10 medE 1525 sec 2
+SCALE n=20 k=6 T=3600: feasible 10/10 medE 1524 sec 2
+SCALE n=20 k=6 T=7200: feasible 10/10 medE 1523 sec 2
+SCALE n=30 k=2 T=1800: feasible 0/10 medE nan sec 7
+SCALE n=30 k=2 T=3600: feasible 9/10 medE 2325 sec 5
+SCALE n=30 k=2 T=7200: feasible 10/10 medE 2244 sec 2
+SCALE n=30 k=4 T=1800: feasible 5/10 medE 2335 sec 7
+SCALE n=30 k=4 T=3600: feasible 10/10 medE 2206 sec 3
+SCALE n=30 k=4 T=7200: feasible 10/10 medE 2230 sec 3
+SCALE n=30 k=6 T=1800: feasible 10/10 medE 2288 sec 3
+SCALE n=30 k=6 T=3600: feasible 10/10 medE 2219 sec 3
+SCALE n=30 k=6 T=7200: feasible 10/10 medE 2231 sec 3
+SCALE n=50 k=2 T=1800: feasible 0/10 medE nan sec 9
+SCALE n=50 k=2 T=3600: feasible 0/10 medE nan sec 9
+SCALE n=50 k=2 T=7200: feasible 10/10 medE 4254 sec 5
+SCALE n=50 k=4 T=1800: feasible 0/10 medE nan sec 10
+SCALE n=50 k=4 T=3600: feasible 10/10 medE 4315 sec 5
+SCALE n=50 k=4 T=7200: feasible 10/10 medE 3692 sec 4
+SCALE n=50 k=6 T=1800: feasible 0/10 medE nan sec 10
+SCALE n=50 k=6 T=3600: feasible 10/10 medE 3731 sec 4
+SCALE n=50 k=6 T=7200: feasible 10/10 medE 3710 sec 4

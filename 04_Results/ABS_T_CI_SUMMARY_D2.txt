@@ -1,0 +1,31 @@
+Absolute bounds, n = 8 (30 draws): feasible with k<=4 | median k* | median premium at k* | median premium at k=4
+-- n = 8
+Los Angeles T=900: feasible 28/30; median k* 3.5; premium at k* median 5.3 % (share >1 %: 21/28); at k=4 median 5.3 %
+Los Angeles T=1200: feasible 30/30; median k* 3.0; premium at k* median 0.0 % (share >1 %: 10/30); at k=4 median 0.0 %
+Los Angeles T=1800: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 0/30); at k=4 median 0.0 %
+Chicago T=900: feasible 30/30; median k* 3.0; premium at k* median 1.1 % (share >1 %: 15/30); at k=4 median 1.1 %
+Chicago T=1200: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 5/30); at k=4 median 0.0 %
+Chicago T=1800: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 0/30); at k=4 median 0.0 %
+Austin T=900: feasible 30/30; median k* 2.0; premium at k* median 8.0 % (share >1 %: 24/30); at k=4 median 8.0 %
+Austin T=1200: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 6/30); at k=4 median 0.0 %
+Austin T=1800: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 0/30); at k=4 median 0.0 %
+-- n = 10
+Los Angeles T=900: feasible 22/30; median k* 4.0; premium at k* median 7.2 % (share >1 %: 21/22); at k=4 median 7.2 %
+Los Angeles T=1200: feasible 28/30; median k* 3.0; premium at k* median 0.0 % (share >1 %: 8/28); at k=4 median 0.0 %
+Los Angeles T=1800: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 2/30); at k=4 median 0.0 %
+Chicago T=900: feasible 30/30; median k* 3.0; premium at k* median 2.1 % (share >1 %: 21/30); at k=4 median 2.1 %
+Chicago T=1200: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 5/30); at k=4 median 0.0 %
+Chicago T=1800: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 0/30); at k=4 median 0.0 %
+Austin T=900: feasible 30/30; median k* 3.0; premium at k* median 14.6 % (share >1 %: 24/30); at k=4 median 14.6 %
+Austin T=1200: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 2/30); at k=4 median 0.0 %
+Austin T=1800: feasible 30/30; median k* 2.0; premium at k* median 0.0 % (share >1 %: 0/30); at k=4 median 0.0 %
+Bootstrap 95 % intervals over draws (median premium %, ratio of medians of Tmin k=1 / k=4)
+n=8 Los Angeles: premium median 11.9 % [9.4, 15.7]; ratio 3.21 [2.94, 3.41]
+n=8 Chicago: premium median 30.1 % [20.5, 34.8]; ratio 2.80 [2.70, 3.30]
+n=8 Austin: premium median 44.5 % [41.6, 49.4]; ratio 2.62 [2.56, 2.67]
+n=10 Los Angeles: premium median 10.2 % [6.8, 12.5]; ratio 3.46 [3.31, 3.78]
+n=10 Chicago: premium median 20.6 % [16.7, 24.7]; ratio 3.38 [2.94, 3.57]
+n=10 Austin: premium median 35.5 % [33.6, 37.5]; ratio 2.78 [2.73, 2.80]
+n=12 Los Angeles: premium median 9.1 % [6.8, 10.8]; ratio 3.74 [3.56, 4.00]
+n=12 Chicago: premium median 12.1 % [8.5, 16.9]; ratio 3.75 [3.59, 4.00]
+n=12 Austin: premium median 20.4 % [15.7, 30.4]; ratio 3.47 [2.82, 3.57]

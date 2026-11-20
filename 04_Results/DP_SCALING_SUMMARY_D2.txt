@@ -1,0 +1,5 @@
+n: median total seconds (trips / one-drone / fleet), median Python-heap peak MB (tracemalloc; excludes numpy/C buffers), median Pareto points at k=4
+n=8: total 6.7 s (6.5 / 0.0 / 0.2); peak 55 MB; points 4
+n=9: total 9.6 s (9.1 / 0.1 / 0.6); peak 63 MB; points 5
+n=10: total 14.1 s (12.3 / 0.2 / 2.0); peak 63 MB; points 4
+n=11: total 25.2 s (16.9 / 0.6 / 7.8); peak 63 MB; points 3

@@ -1,0 +1,3 @@
+Heights multiplied by 3.28 (unit metres instead of feet) versus the base arm (feet), same draws
+LA_base: E_min change median +4.34 % (range +3.42 to +7.40); Tmin(k=4) change median +3.54 % (range +2.55 to +4.96); premium change median +0.46 points (range -2.75 to +4.68); premium median 12.3 %
+AUS_base: E_min change median +3.75 % (range +2.38 to +4.52); Tmin(k=4) change median +3.49 % (range +2.02 to +4.78); premium change median +1.14 points (range -6.27 to +5.67); premium median 45.5 %

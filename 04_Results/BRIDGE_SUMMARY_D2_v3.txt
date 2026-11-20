@@ -1,0 +1,40 @@
+GAP n=8: rows 360, missed 3; gap mean 0.07% p95 0.00% max 6.54%; hit 0.97; sec 1.4
+   theta 0.0: missed 3/90, mean 0.00%, max 0.00%
+   theta 0.25: missed 0/90, mean 0.08%, max 3.18%
+   theta 0.5: missed 0/90, mean 0.10%, max 6.54%
+   theta 1.0: missed 0/90, mean 0.08%, max 2.36%
+GAP n=10: rows 360, missed 31; gap mean 0.26% p95 1.36% max 11.54%; hit 0.89; sec 2.1
+   theta 0.0: missed 21/90, mean 0.09%, max 4.46%
+   theta 0.25: missed 7/90, mean 0.48%, max 8.44%
+   theta 0.5: missed 3/90, mean 0.28%, max 11.54%
+   theta 1.0: missed 0/90, mean 0.15%, max 1.64%
+SCALE n=20 k=2 T=1800: feasible 0/10 medE nan
+SCALE n=20 k=2 T=3600: feasible 10/10 medE 1524
+SCALE n=20 k=2 T=7200: feasible 10/10 medE 1518
+SCALE n=20 k=4 T=1800: feasible 10/10 medE 1525
+SCALE n=20 k=4 T=3600: feasible 10/10 medE 1525
+SCALE n=20 k=4 T=7200: feasible 10/10 medE 1511
+SCALE n=20 k=6 T=1800: feasible 10/10 medE 1514
+SCALE n=20 k=6 T=3600: feasible 10/10 medE 1518
+SCALE n=20 k=6 T=7200: feasible 10/10 medE 1518
+  n=20 T=7200 spread across k=2,4,6: median 0.75% max 1.88% (n=10)
+SCALE n=30 k=2 T=1800: feasible 0/10 medE nan
+SCALE n=30 k=2 T=3600: feasible 9/10 medE 2211
+SCALE n=30 k=2 T=7200: feasible 10/10 medE 2232
+SCALE n=30 k=4 T=1800: feasible 5/10 medE 2149
+SCALE n=30 k=4 T=3600: feasible 10/10 medE 2201
+SCALE n=30 k=4 T=7200: feasible 10/10 medE 2217
+SCALE n=30 k=6 T=1800: feasible 10/10 medE 2235
+SCALE n=30 k=6 T=3600: feasible 10/10 medE 2215
+SCALE n=30 k=6 T=7200: feasible 10/10 medE 2226
+  n=30 T=7200 spread across k=2,4,6: median 0.81% max 2.56% (n=10)
+SCALE n=50 k=2 T=1800: feasible 0/10 medE nan
+SCALE n=50 k=2 T=3600: feasible 0/10 medE nan
+SCALE n=50 k=2 T=7200: feasible 10/10 medE 3727
+SCALE n=50 k=4 T=1800: feasible 0/10 medE nan
+SCALE n=50 k=4 T=3600: feasible 10/10 medE 3741
+SCALE n=50 k=4 T=7200: feasible 10/10 medE 3686
+SCALE n=50 k=6 T=1800: feasible 0/10 medE nan
+SCALE n=50 k=6 T=3600: feasible 10/10 medE 3713
+SCALE n=50 k=6 T=7200: feasible 10/10 medE 3695
+  n=50 T=7200 spread across k=2,4,6: median 1.19% max 5.10% (n=10)

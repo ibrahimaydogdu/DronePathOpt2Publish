@@ -1,0 +1,12 @@
+LA_base k=1: draws=30 Pareto points total 67 (median 2 per draw); weighted-sum can return 58 (86.6 %); unsupported share per draw median 0.0 %, max 50.0 %; draws with >=1 unsupported 5/30
+LA_base k=2: draws=30 Pareto points total 109 (median 3 per draw); weighted-sum can return 81 (74.3 %); unsupported share per draw median 0.0 %, max 55.6 %; draws with >=1 unsupported 13/30
+LA_base k=3: draws=30 Pareto points total 105 (median 3 per draw); weighted-sum can return 75 (71.4 %); unsupported share per draw median 0.0 %, max 72.7 %; draws with >=1 unsupported 13/30
+LA_base k=4: draws=30 Pareto points total 131 (median 4 per draw); weighted-sum can return 89 (67.9 %); unsupported share per draw median 25.0 %, max 63.6 %; draws with >=1 unsupported 19/30
+CHI_base k=1: draws=30 Pareto points total 75 (median 2 per draw); weighted-sum can return 58 (77.3 %); unsupported share per draw median 0.0 %, max 71.4 %; draws with >=1 unsupported 9/30
+CHI_base k=2: draws=30 Pareto points total 134 (median 4 per draw); weighted-sum can return 93 (69.4 %); unsupported share per draw median 25.0 %, max 75.0 %; draws with >=1 unsupported 17/30
+CHI_base k=3: draws=30 Pareto points total 212 (median 6 per draw); weighted-sum can return 91 (42.9 %); unsupported share per draw median 47.7 %, max 82.4 %; draws with >=1 unsupported 27/30
+CHI_base k=4: draws=30 Pareto points total 334 (median 11 per draw); weighted-sum can return 124 (37.1 %); unsupported share per draw median 60.8 %, max 81.8 %; draws with >=1 unsupported 30/30
+AUS_base k=1: draws=30 Pareto points total 67 (median 2 per draw); weighted-sum can return 55 (82.1 %); unsupported share per draw median 0.0 %, max 50.0 %; draws with >=1 unsupported 9/30
+AUS_base k=2: draws=30 Pareto points total 121 (median 3 per draw); weighted-sum can return 76 (62.8 %); unsupported share per draw median 10.0 %, max 66.7 %; draws with >=1 unsupported 15/30
+AUS_base k=3: draws=30 Pareto points total 270 (median 9 per draw); weighted-sum can return 117 (43.3 %); unsupported share per draw median 57.8 %, max 75.0 %; draws with >=1 unsupported 28/30
+AUS_base k=4: draws=30 Pareto points total 378 (median 12 per draw); weighted-sum can return 141 (37.3 %); unsupported share per draw median 60.0 %, max 82.4 %; draws with >=1 unsupported 30/30

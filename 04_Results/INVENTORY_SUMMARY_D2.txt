@@ -1,0 +1,23 @@
+n=8 SYNTHETIC; 30 draws; E_slack = min energy with time unconstrained for fleet k
+1) Slack-T energy vs fleet size: share of draws where E(k) exceeds E(k=4) by >0.5%; median excess %; feasible share
+  b=1 k=1: feasible 0/30
+  b=1 k=2: feasible 30/30; share>0.5% 0.27; median excess 0.00%; max 7.5%
+  b=1 k=3: feasible 30/30; share>0.5% 0.00; median excess 0.00%; max 0.0%
+  b=2 k=1: feasible 30/30; share>0.5% 0.27; median excess 0.00%; max 7.5%
+  b=2 k=2: feasible 30/30; share>0.5% 0.00; median excess 0.00%; max 0.0%
+  b=2 k=3: feasible 30/30; share>0.5% 0.00; median excess 0.00%; max 0.0%
+  b=inf k=1: feasible 30/30; share>0.5% 0.00; median excess 0.00%; max 0.0%
+  b=inf k=2: feasible 30/30; share>0.5% 0.00; median excess 0.00%; max 0.0%
+  b=inf k=3: feasible 30/30; share>0.5% 0.00; median excess 0.00%; max 0.0%
+2) Fixed energy c: drones used at the energy minimum (k=4, b=inf), median / share using 1 drone
+  c=0 Wh: median drones used 2; share single-drone 0.00; median E_min 656 Wh
+  c=15 Wh: median drones used 1; share single-drone 1.00; median E_min 671 Wh
+  c=45 Wh: median drones used 1; share single-drone 1.00; median E_min 701 Wh
+3) Premium of the fastest completion pi = E(Tmin(k)) / E_slack(k=4, same c, b) - 1, b=inf (median %)
+  c=0: k=1: 6.8%; k=2: 10.2%; k=3: 8.8%; k=4: 14.0%
+  c=15: k=1: 6.6%; k=2: 12.0%; k=3: 13.0%; k=4: 20.5%
+  c=45: k=1: 6.3%; k=2: 15.4%; k=3: 21.7%; k=4: 31.9%
+4) Inventory b=1: minimum fleet for any plan (feasible share at k=1..4) and median Tmin(k) s
+  b=1: feasible k=1:0/30, k=2:30/30, k=3:30/30, k=4:30/30; median Tmin k=2:913, k=3:692, k=4:582
+  b=2: feasible k=1:30/30, k=2:30/30, k=3:30/30, k=4:30/30; median Tmin k=1:1867, k=2:913, k=3:692, k=4:582
+  b=inf: feasible k=1:30/30, k=2:30/30, k=3:30/30, k=4:30/30; median Tmin k=1:1867, k=2:913, k=3:692, k=4:582

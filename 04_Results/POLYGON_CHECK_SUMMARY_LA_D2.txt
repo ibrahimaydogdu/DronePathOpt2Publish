@@ -1,0 +1,5 @@
+LA: around legs checked 20; path inside a blocking footprint 3; clearance median 5.4 m, 10th pct 0.0 m, min 0.0 m; < 5 m: 9
+raster 5m vs 10 m (10 instances): E_min change median -0.13 % (range -0.33 to +0.00); T_min(k=4) change median +0.00 % (range -0.32 to +0.04); premium change median +0.02 points (range +0.00 to +0.14)
+raster 20m vs 10 m (10 instances): E_min change median +0.00 % (range -0.28 to +0.53); T_min(k=4) change median +0.00 % (range -0.60 to +0.59); premium change median +0.00 points (range -0.07 to +0.05)
+raster 10m_shift vs 10 m (10 instances): E_min change median -0.01 % (range -0.25 to +0.09); T_min(k=4) change median +0.00 % (range -0.33 to +0.09); premium change median +0.00 points (range -0.01 to +0.07)
+raster 10m_w15 vs 10 m (10 instances): E_min change median +0.10 % (range +0.01 to +0.55); T_min(k=4) change median +0.01 % (range +0.00 to +0.59); premium change median -0.01 points (range -0.14 to +0.04)

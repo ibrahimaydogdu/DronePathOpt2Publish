@@ -1,0 +1,4 @@
+runs 540; MILP solved 540; status!=0 0; |E_milp - E_dp| > 1e-4 Wh in 0 runs; max |diff| 1.30e-05 Wh
+k=2: MILP median 0.16 s (max 7.3), DP fleet merge median 0.22 s, columns median 1235
+k=4: MILP median 0.07 s (max 7.3), DP fleet merge median 1.15 s, columns median 2470
+trip table median 5.9 s (shared by both)

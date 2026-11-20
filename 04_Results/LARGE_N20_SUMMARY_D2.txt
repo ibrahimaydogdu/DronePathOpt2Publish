@@ -1,0 +1,14 @@
+n=20 rows 360 cells 36 (reference = best value found by any method/run in cell; not a bound)
+method   noplan%  hit-best%(<=best+0.1%)  mean gap% (feasible)  median gap%
+SA_full     9.2       25.0           0.94       0.45
+ALNS       12.5        8.6           2.02       1.88
+ownABC     56.1        0.0           6.49       5.85
+libABC     30.3        0.3           6.11       4.96
+by k and theta (hit-best%):
+ k 2 theta 0.25 {'SA_full': 25.0, 'ALNS': 5.0, 'ownABC': 0.0, 'libABC': 0.0}
+ k 2 theta 0.5 {'SA_full': 25.0, 'ALNS': 6.7, 'ownABC': 0.0, 'libABC': 0.0}
+ k 2 theta 1.0 {'SA_full': 26.7, 'ALNS': 5.0, 'ownABC': 0.0, 'libABC': 0.0}
+ k 4 theta 0.25 {'SA_full': 21.7, 'ALNS': 6.7, 'ownABC': 0.0, 'libABC': 0.0}
+ k 4 theta 0.5 {'SA_full': 18.3, 'ALNS': 10.0, 'ownABC': 0.0, 'libABC': 0.0}
+ k 4 theta 1.0 {'SA_full': 33.3, 'ALNS': 18.3, 'ownABC': 0.0, 'libABC': 1.7}
+mean SA runtime s: 7.2

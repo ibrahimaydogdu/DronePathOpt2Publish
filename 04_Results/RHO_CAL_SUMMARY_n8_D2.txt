@@ -1,0 +1,4 @@
+Lognormal mass (median 0.695 kg, sigma 1.252), n = 8, 30 draws per station
+LA: mean stop mass 1.13 kg; E_min median 718.5 Wh; Tmin k=1 2225 -> k=4 748 (ratio of medians 2.97); premium median 23.6 % (max 46.9)
+CHI: mean stop mass 1.13 kg; E_min median 594.3 Wh; Tmin k=1 1789 -> k=4 663 (ratio of medians 2.70); premium median 38.3 % (max 95.8)
+AUS: mean stop mass 1.13 kg; E_min median 611.4 Wh; Tmin k=1 1874 -> k=4 726 (ratio of medians 2.58); premium median 45.5 % (max 89.6)

@@ -1,0 +1,4 @@
+cap = 12 requests per trip. Validation at 10 requests: identical frontiers (k=1..4) in 3 of 3 draws; median seconds full 5.7, capped 1.2
+LA_base n=12: draws 30; E_min median 1133.4; Tmin k=1 3470 -> k=4 929 (ratio median 3.64); premium median 9.1 % max 17.6 %; sec median 24
+CHI_base n=12: draws 30; E_min median 902.5; Tmin k=1 2780 -> k=4 742 (ratio median 3.68); premium median 12.1 % max 33.5 %; sec median 10
+AUS_base n=12: draws 30; E_min median 868.4; Tmin k=1 2745 -> k=4 791 (ratio median 3.49); premium median 20.4 % max 43.2 %; sec median 16

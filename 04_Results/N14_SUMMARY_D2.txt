@@ -1,0 +1,4 @@
+n = 14, k = 1 and 4, 10 draws per station
+LA_base: E_min median 1299.9; Tmin k=1 4113 -> k=4 976 (ratio of medians 4.21); premium median 7.6 % (max 21.0); sec tables median 54, fleet(4) 140
+CHI_base: E_min median 1029.7; Tmin k=1 3244 -> k=4 795 (ratio of medians 4.08); premium median 8.2 % (max 16.3); sec tables median 53, fleet(4) 212
+AUS_base: E_min median 1034.7; Tmin k=1 3076 -> k=4 834 (ratio of medians 3.69); premium median 12.7 % (max 22.1); sec tables median 70, fleet(4) 202

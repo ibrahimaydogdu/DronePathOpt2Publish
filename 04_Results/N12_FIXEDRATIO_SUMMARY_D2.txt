@@ -1,0 +1,6 @@
+LA_base: n=12,k=3 premium median 4.7 % (max 19.3); n=8,k=2 premium median 5.7 % (max 23.1)
+LA_base: n=12,k=6 premium median 21.3 % (max 43.6); n=8,k=4 premium median 11.9 % (max 24.6)
+CHI_base: n=12,k=3 premium median 4.2 % (max 19.5); n=8,k=2 premium median 4.3 % (max 13.0)
+CHI_base: n=12,k=6 premium median 36.8 % (max 58.3); n=8,k=4 premium median 30.1 % (max 58.7)
+AUS_base: n=12,k=3 premium median 7.3 % (max 20.5); n=8,k=2 premium median 3.2 % (max 24.8)
+AUS_base: n=12,k=6 premium median 50.3 % (max 83.4); n=8,k=4 premium median 44.5 % (max 84.9)

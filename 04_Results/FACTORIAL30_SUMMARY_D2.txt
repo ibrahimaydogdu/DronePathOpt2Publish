@@ -1,0 +1,22 @@
+rows 2160 cells 72
+Layout: paradigm x encoding.  SA/native: SA_full(guided), SA_plain; SA/keys: SAkeys; ABC/keys: libABC; ABC/native: ownABC; GA/native: ownGA; TLBO/GWO keys
+method    match% noplan% meangap%(feasible)
+SA_full     86.5     5.0     0.21
+SA_plain    70.5    14.9     0.44
+SAkeys      47.1    18.8     1.20
+libABC      22.5    15.2     2.18
+TLBO         6.5    31.8     3.81
+GWO          6.9    40.8     3.92
+gABC        16.1    19.6     2.65
+ownABC      44.8    11.9     0.97
+ownGA       29.2    36.6     1.80
+
+Paired Wilcoxon on per-cell success rate (SA_full vs other), Holm over 8 comparisons
+  vs GWO       p_holm 1.24e-12  SA better in 72, worse in 0 cells, mean diff 79.7 pts
+  vs TLBO      p_holm 1.24e-12  SA better in 72, worse in 0 cells, mean diff 80.0 pts
+  vs gABC      p_holm 1.24e-12  SA better in 72, worse in 0 cells, mean diff 70.4 pts
+  vs libABC    p_holm 1.24e-12  SA better in 72, worse in 0 cells, mean diff 64.0 pts
+  vs ownGA     p_holm 1.40e-12  SA better in 70, worse in 0 cells, mean diff 57.3 pts
+  vs SAkeys    p_holm 4.85e-12  SA better in 66, worse in 0 cells, mean diff 39.4 pts
+  vs ownABC    p_holm 1.05e-11  SA better in 62, worse in 1 cells, mean diff 41.8 pts
+  vs SA_plain  p_holm 2.22e-10  SA better in 53, worse in 1 cells, mean diff 16.0 pts

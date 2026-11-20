@@ -1,0 +1,34 @@
+rows 7200 cells 240
+
+Overall per-run: match% / noplan% / mean gap(%) over feasible
+  SA_full    76.3  11.2   0.43
+  SA_plain   65.3  16.7   0.61
+  libABC     17.4  23.5   2.43
+  gABC       13.0  24.5   3.10
+
+By theta (match %):
+  theta 0.0 {'SA_full': 75.9, 'SA_plain': 62.4, 'libABC': 11.9, 'gABC': 12.4}
+  theta 0.25 {'SA_full': 73.4, 'SA_plain': 64.7, 'libABC': 16.8, 'gABC': 12.3}
+  theta 0.5 {'SA_full': 76.2, 'SA_plain': 66.5, 'libABC': 22.5, 'gABC': 12.7}
+  theta 1.0 {'SA_full': 79.7, 'SA_plain': 67.8, 'libABC': 18.3, 'gABC': 14.3}
+By k:
+  k 2 {'SA_full': 65.0, 'SA_plain': 51.4, 'libABC': 15.6, 'gABC': 12.2}
+  k 4 {'SA_full': 87.6, 'SA_plain': 79.3, 'libABC': 19.1, 'gABC': 13.7}
+
+Per-cell (30 runs): cells where method matches exact in all/majority/never
+  SA_full   all 93  >=50% 197  never 9  mean success 76.3%
+  SA_plain  all 46  >=50% 177  never 3  mean success 65.3%
+  libABC    all 0  >=50% 11  never 34  mean success 17.4%
+  gABC      all 0  >=50% 13  never 66  mean success 13.0%
+
+Per-cell MWU on gap (inf for no plan), SA_full vs each; Holm over cells within comparison; A12 = P(SA better)
+  SA_full vs SA_plain : cells 240; SA sig better 11; other sig better 0; median A12 0.54
+  SA_full vs libABC   : cells 240; SA sig better 187; other sig better 0; median A12 0.87
+  SA_full vs gABC     : cells 240; SA sig better 207; other sig better 2; median A12 0.92
+SA_plain wilcoxon p 1.2629770853275318e-19 cells SA better 144 worse 38 mean diff 0.10958333333333337
+libABC wilcoxon p 4.320553566060626e-39 cells SA better 222 worse 9 mean diff 0.5865277777777781
+gABC wilcoxon p 1.8086779555265638e-39 cells SA better 227 worse 5 mean diff 0.6304166666666671
+SA never-match cells [('LA_base', '1004', '4', '0.25'), ('LA_base', '1004', '4', '0.5'), ('LA_base', '1007', '2', '0.0'), ('LA_base', '1008', '2', '0.5'), ('AUS_base', '1003', '2', '0.0'), ('AUS_base', '1007', '2', '0.25'), ('AUS_base', '1008', '4', '1.0'), ('AUS_base', '1010', '2', '0.25'), ('AUS_base', '1010', '2', '0.5'), ('AUS_base', '1010', '2', '1.0'), ('AUS_base', '1010', '4', '1.0')]
+LA_base {'SA_full': 71.0, 'SA_plain': 60.2, 'libABC': 26.3, 'gABC': 20.7}
+CHI_base {'SA_full': 81.9, 'SA_plain': 68.6, 'libABC': 14.1, 'gABC': 11.0}
+AUS_base {'SA_full': 75.0, 'SA_plain': 66.3, 'libABC': 11.5, 'gABC': 7.1}

@@ -1,0 +1,5 @@
+ALNS n=12, 72 cells x 30 runs: match 75.7% noplan 10.3% below-exact violations 11
+  SA_full 86.5%
+  SA_plain 70.5%
+  libABC 22.5%
+  gABC 16.1%

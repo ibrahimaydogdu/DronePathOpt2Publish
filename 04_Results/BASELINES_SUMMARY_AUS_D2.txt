@@ -1,0 +1,8 @@
+AUS_base DIST theta=0.0: n=30 not_ok=5 (no_plan 5, battery 0) regret>0 in 24/25; median 0.66% mean 1.30% max 4.92%
+AUS_base DIST theta=0.25: n=30 not_ok=0 (no_plan 0, battery 0) regret>0 in 27/30; median 1.37% mean 1.72% max 7.56%
+AUS_base DIST theta=0.5: n=30 not_ok=0 (no_plan 0, battery 0) regret>0 in 27/30; median 1.58% mean 2.58% max 11.08%
+AUS_base DIST theta=1.0: n=30 not_ok=0 (no_plan 0, battery 0) regret>0 in 24/30; median 2.38% mean 4.82% max 19.57%
+AUS_base LOADBL theta=0.0: n=30 not_ok=0 (no_plan 0, battery 0) regret>0 in 15/30; median 0.00% mean 0.20% max 2.04%
+AUS_base LOADBL theta=0.25: n=30 not_ok=0 (no_plan 0, battery 0) regret>0 in 15/30; median 0.00% mean 0.14% max 0.83%
+AUS_base LOADBL theta=0.5: n=30 not_ok=0 (no_plan 0, battery 0) regret>0 in 17/30; median 0.10% mean 0.27% max 1.19%
+AUS_base LOADBL theta=1.0: n=30 not_ok=0 (no_plan 0, battery 0) regret>0 in 13/30; median 0.00% mean 0.48% max 3.55%

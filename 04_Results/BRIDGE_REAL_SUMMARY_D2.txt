@@ -1,0 +1,22 @@
+n=8 all: runs=720 no feasible solution found=15; among found: exact (gap<=0.01%) 693/705, mean gap 0.07%, p95 0.00%, max 8.46%; mean sec 1.3
+n=8 LA_base: runs=240 no feasible solution found=12; among found: exact (gap<=0.01%) 225/228, mean gap 0.02%, p95 0.00%, max 2.77%; mean sec 1.4
+n=8 CHI_base: runs=240 no feasible solution found=0; among found: exact (gap<=0.01%) 235/240, mean gap 0.10%, p95 0.00%, max 8.46%; mean sec 1.3
+n=8 AUS_base: runs=240 no feasible solution found=3; among found: exact (gap<=0.01%) 233/237, mean gap 0.09%, p95 0.00%, max 7.74%; mean sec 1.4
+n=8 theta=0.0: runs=180 no feasible solution found=5; among found: exact (gap<=0.01%) 175/175, mean gap 0.00%, p95 0.00%, max 0.00%; mean sec 1.4
+n=8 theta=0.25: runs=180 no feasible solution found=5; among found: exact (gap<=0.01%) 172/175, mean gap 0.05%, p95 0.00%, max 6.69%; mean sec 1.4
+n=8 theta=0.5: runs=180 no feasible solution found=5; among found: exact (gap<=0.01%) 172/175, mean gap 0.03%, p95 0.00%, max 4.74%; mean sec 1.4
+n=8 theta=1.0: runs=180 no feasible solution found=0; among found: exact (gap<=0.01%) 174/180, mean gap 0.19%, p95 0.00%, max 8.46%; mean sec 1.2
+n=8 k=2: runs=360 no feasible solution found=15; among found: exact (gap<=0.01%) 336/345, mean gap 0.08%, p95 0.00%, max 8.46%; mean sec 1.4
+n=8 k=4: runs=360 no feasible solution found=0; among found: exact (gap<=0.01%) 357/360, mean gap 0.05%, p95 0.00%, max 8.46%; mean sec 1.3
+n=8: heuristic makespan above bound in 0 runs (must be 0)
+n=10 all: runs=720 no feasible solution found=20; among found: exact (gap<=0.01%) 674/700, mean gap 0.06%, p95 0.00%, max 9.09%; mean sec 1.7
+n=10 LA_base: runs=240 no feasible solution found=13; among found: exact (gap<=0.01%) 220/227, mean gap 0.03%, p95 0.00%, max 2.66%; mean sec 1.8
+n=10 CHI_base: runs=240 no feasible solution found=5; among found: exact (gap<=0.01%) 229/235, mean gap 0.02%, p95 0.00%, max 3.02%; mean sec 1.7
+n=10 AUS_base: runs=240 no feasible solution found=2; among found: exact (gap<=0.01%) 225/238, mean gap 0.13%, p95 0.06%, max 9.09%; mean sec 1.7
+n=10 theta=0.0: runs=180 no feasible solution found=11; among found: exact (gap<=0.01%) 169/169, mean gap 0.00%, p95 0.00%, max 0.00%; mean sec 2.0
+n=10 theta=0.25: runs=180 no feasible solution found=7; among found: exact (gap<=0.01%) 168/173, mean gap 0.00%, p95 0.00%, max 0.22%; mean sec 1.7
+n=10 theta=0.5: runs=180 no feasible solution found=2; among found: exact (gap<=0.01%) 172/178, mean gap 0.09%, p95 0.00%, max 9.09%; mean sec 1.6
+n=10 theta=1.0: runs=180 no feasible solution found=0; among found: exact (gap<=0.01%) 165/180, mean gap 0.14%, p95 0.47%, max 4.28%; mean sec 1.5
+n=10 k=2: runs=360 no feasible solution found=19; among found: exact (gap<=0.01%) 328/341, mean gap 0.05%, p95 0.00%, max 3.27%; mean sec 1.8
+n=10 k=4: runs=360 no feasible solution found=1; among found: exact (gap<=0.01%) 346/359, mean gap 0.07%, p95 0.00%, max 9.09%; mean sec 1.6
+n=10: heuristic makespan above bound in 0 runs (must be 0)

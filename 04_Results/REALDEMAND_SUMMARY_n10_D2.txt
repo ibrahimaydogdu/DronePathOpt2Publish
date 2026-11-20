@@ -1,0 +1,24 @@
+LA_base: draws=30 pool=193 heavy_excl=7 mean_q(draw mean)~1.43
+  feasible k=1: 30/30; E_min median 960.9 Wh [792.9, 1285.2]
+  Tmin median k=1 2963 s, k=4 856 s (ratio 3.46)
+  energy premium of the time-minimal plan at k=4 over E_min: median 10.2 %, max 22.4 %
+  draws where k=1 slack energy exceeds k=4 by > 0.5 %: 0/30
+  T=900: feasible at some k<=4 in 22/30 draws; median min k 4.0
+  T=1800: feasible at some k<=4 in 30/30 draws; median min k 2.0
+  T=3600: feasible at some k<=4 in 30/30 draws; median min k 1.0
+CHI_base: draws=30 pool=45 heavy_excl=0 mean_q(draw mean)~1.37
+  feasible k=1: 30/30; E_min median 744.7 Wh [574.5, 1023.2]
+  Tmin median k=1 2414 s, k=4 714 s (ratio 3.38)
+  energy premium of the time-minimal plan at k=4 over E_min: median 20.6 %, max 50.6 %
+  draws where k=1 slack energy exceeds k=4 by > 0.5 %: 0/30
+  T=900: feasible at some k<=4 in 30/30 draws; median min k 3.0
+  T=1800: feasible at some k<=4 in 30/30 draws; median min k 2.0
+  T=3600: feasible at some k<=4 in 30/30 draws; median min k 1.0
+AUS_base: draws=30 pool=73 heavy_excl=3 mean_q(draw mean)~1.04
+  feasible k=1: 30/30; E_min median 713.5 Wh [604.1, 938.4]
+  Tmin median k=1 2079 s, k=4 747 s (ratio 2.78)
+  energy premium of the time-minimal plan at k=4 over E_min: median 35.5 %, max 49.1 %
+  draws where k=1 slack energy exceeds k=4 by > 0.5 %: 0/30
+  T=900: feasible at some k<=4 in 30/30 draws; median min k 3.0
+  T=1800: feasible at some k<=4 in 30/30 draws; median min k 2.0
+  T=3600: feasible at some k<=4 in 30/30 draws; median min k 1.0

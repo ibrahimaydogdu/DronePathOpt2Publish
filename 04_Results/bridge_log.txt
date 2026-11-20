@@ -1,0 +1,5 @@
+wrote ./04_Results\bridge_gap_n8.csv 360
+wrote ./04_Results\bridge_gap_n10.csv 360
+wrote ./04_Results\bridge_scale_n20.csv 90
+wrote ./04_Results\bridge_scale_n30.csv 90
+wrote ./04_Results\bridge_scale_n50.csv 90

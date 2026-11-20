@@ -1,0 +1,9 @@
+AUS_base b=1 c=0.0: feasible(k=1..4)=(6, 27, 30, 30)/30; slack-E above k=4 by >0.5% (k=1,2,3)=(0, 0, 0); k=1 max gap 0.0%; time-min premium at k=4 median 44.5%; drones used at E_min median 2.0
+AUS_base b=1 c=15.0: feasible(k=1..4)=(6, 27, 30, 30)/30; slack-E above k=4 by >0.5% (k=1,2,3)=(0, 0, 0); k=1 max gap 0.0%; time-min premium at k=4 median 47.0%; drones used at E_min median 2.0
+AUS_base b=1 c=45.0: feasible(k=1..4)=(6, 27, 30, 30)/30; slack-E above k=4 by >0.5% (k=1,2,3)=(0, 0, 0); k=1 max gap 0.0%; time-min premium at k=4 median 51.5%; drones used at E_min median 2.0
+AUS_base b=2 c=0.0: feasible(k=1..4)=(27, 30, 30, 30)/30; slack-E above k=4 by >0.5% (k=1,2,3)=(0, 0, 0); k=1 max gap 0.0%; time-min premium at k=4 median 44.5%; drones used at E_min median 2.0
+AUS_base b=2 c=15.0: feasible(k=1..4)=(27, 30, 30, 30)/30; slack-E above k=4 by >0.5% (k=1,2,3)=(0, 0, 0); k=1 max gap 0.0%; time-min premium at k=4 median 50.5%; drones used at E_min median 1.0
+AUS_base b=2 c=45.0: feasible(k=1..4)=(27, 30, 30, 30)/30; slack-E above k=4 by >0.5% (k=1,2,3)=(0, 0, 0); k=1 max gap 0.0%; time-min premium at k=4 median 61.6%; drones used at E_min median 1.0
+AUS_base b=inf c=0.0: feasible(k=1..4)=(30, 30, 30, 30)/30; slack-E above k=4 by >0.5% (k=1,2,3)=(0, 0, 0); k=1 max gap 0.0%; time-min premium at k=4 median 44.5%; drones used at E_min median 2.0
+AUS_base b=inf c=15.0: feasible(k=1..4)=(30, 30, 30, 30)/30; slack-E above k=4 by >0.5% (k=1,2,3)=(0, 0, 0); k=1 max gap 0.0%; time-min premium at k=4 median 50.5%; drones used at E_min median 1.0
+AUS_base b=inf c=45.0: feasible(k=1..4)=(30, 30, 30, 30)/30; slack-E above k=4 by >0.5% (k=1,2,3)=(0, 0, 0); k=1 max gap 0.0%; time-min premium at k=4 median 61.6%; drones used at E_min median 1.0
